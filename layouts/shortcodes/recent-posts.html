@@ -1,0 +1,36 @@
+<div class="recent-posts">
+  {{ range first 5 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+    <article class="post-item">
+      <h3 class="post-title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h3>
+      <div class="post-meta">
+        <time>{{ .Date.Format "January 2, 2006" }}</time>
+        <span>• {{ .ReadingTime }} min read</span>
+      </div>
+      <p>{{ .Summary | truncate 150 }} <a href="{{ .RelPermalink }}">Read more →</a></p>
+    </article>
+  {{ end }}
+</div>
+
+<style>
+.recent-posts {
+  margin-top: 1.5rem;
+}
+.post-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+.post-title {
+  margin: 0 0 0.5rem 0;
+}
+.post-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.post-meta time {
+  margin-right: 0.5rem;
+}
+</style>

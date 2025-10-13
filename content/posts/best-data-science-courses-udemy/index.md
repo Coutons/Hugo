@@ -3,11 +3,10 @@ title: "10 Best Data Science Courses on Udemy 2025"
 date: 2025-10-13
 lastmod: 2025-10-13T15:00:00+07:00
 draft: false
-description: "Discover the top 10 best data science courses on Udemy for 2025. Learn machine learning, AI, Python, and data analysis from top instructors."
+showReadingTime: true
+description: "Discover the top 10 best data science courses on Udemy for 2025."
 categories: ["Data Science", "Online Courses"]
 tags: ["data science", "udemy", "machine learning", "python", "2025"]
-featuredImage: "/images/posts/best-data-science-courses-udemy/featured.jpg"
-featuredImageAlt: "Best Data Science Courses on Udemy 2025"
 canonicalURL: ""
 seo_title: "10 Best Data Science Courses on Udemy 2025 | CoursesWyn"
 seo_description: "Discover the top 10 best data science courses on Udemy for 2025. Learn machine learning, AI, Python, and data analysis from top instructors."

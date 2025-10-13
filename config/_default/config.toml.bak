@@ -1,8 +1,8 @@
-﻿baseURL = 'https://courseswyn.com/'
-canonifyURLs = true
+baseURL = 'https://courseswyn.com/'
 languageCode = 'en-us'
 title = 'CoursesWyn'
 theme = 'PaperMod'
+canonifyURLs = true
 
 # Disable language in URL
 defaultContentLanguage = 'en'
@@ -13,7 +13,7 @@ defaultContentLanguageInSubdir = false
   page = '/:slug/'
 
 [params]
-  env = 'development'
+  env = 'production'
   description = 'Your site description'
   
   [params.theme]
@@ -40,3 +40,10 @@ defaultContentLanguageInSubdir = false
   quality = 85
   anchor = 'smart'
   resampleFilter = 'CatmullRom'
+[params]
+  mainSections = ["posts"]
+  enablePostNavigationLinks = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"

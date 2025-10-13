@@ -1,0 +1,36 @@
+﻿baseURL = 'https://courseswyn.com/'
+languageCode = 'en-us'
+title = 'CoursesWyn'
+theme = 'PaperMod'
+canonifyURLs = true
+
+# Disable language in URL
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false
+
+[permalinks]
+  posts = '/:slug/'
+  page = '/:slug/'
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = 'github'
+
+[imaging]
+  quality = 85
+  anchor = 'smart'
+  resampleFilter = 'CatmullRom'
+
+
+[params]
+  mainSections = ["posts"]
+  enablePostNavigationLinks = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"

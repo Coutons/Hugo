@@ -1,21 +1,14 @@
-baseURL = 'https://courseswyn.com/'
-languageCode = 'en-us'
-title = 'CoursesWyn'
-theme = 'PaperMod'
-canonifyURLs = true
-
-# Disable language in URL
-defaultContentLanguage = 'en'
-defaultContentLanguageInSubdir = false
-
-[permalinks]
-  posts = '/:slug/'
-  page = '/:slug/'
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "CoursesWyn"
+theme = "PaperMod"
 
 [params]
-  env = 'production'
-  description = 'Your site description'
-  
+  env = "production"
+  description = "Discover the best Udemy courses and online learning resources"
+  mainSections = ["posts"]
+  enablePostNavigationLinks = true
+
   [params.theme]
     hideMainMenu = false
     hideSidebar = false
@@ -32,11 +25,17 @@ defaultContentLanguageInSubdir = false
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-  [markup.highlight]
-    noClasses = false
-    style = 'github'
 
 [imaging]
   quality = 85
   anchor = 'smart'
   resampleFilter = 'CatmullRom'
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[permalinks]
+  posts = '/:slug/'
+  page = '/:slug/'
+
