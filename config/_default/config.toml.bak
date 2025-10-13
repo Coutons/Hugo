@@ -1,8 +1,8 @@
-baseURL = 'https://courseswyn.com/'
-languageCode = 'en-us'
-title = 'Your Site Title'
-theme = 'PaperMod'
+﻿baseURL = 'https://courseswyn.com/'
 canonifyURLs = true
+languageCode = 'en-us'
+title = 'CoursesWyn'
+theme = 'PaperMod'
 
 # Disable language in URL
 defaultContentLanguage = 'en'
@@ -13,7 +13,7 @@ defaultContentLanguageInSubdir = false
   page = '/:slug/'
 
 [params]
-  env = 'production'
+  env = 'development'
   description = 'Your site description'
   
   [params.theme]

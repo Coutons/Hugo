@@ -1,3 +1,4 @@
+$netlifyConfig = @"
 [build]
   command = "hugo --gc --minify --environment production"
   publish = "public"
@@ -6,23 +7,26 @@
   HUGO_VERSION = "0.150.0"
   NODE_VERSION = "20"
 
-[context.production.environment]
-  HUGO_ENV = "production"
-  HUGO_BASEURL = "https://courseswyn.com/"
+[context.production]
+  command = "hugo --gc --minify --environment production"
+  [context.production.environment]
+    HUGO_ENV = "production"
+    HUGO_BASEURL = "https://courseswyn.com/"
 
 [[redirects]]
   from = "/*"
   to = "/:splat"
   status = 200
 
-# Redirect www to non-www
+[[redirects]]
+  from = "http://*"
+  to = "https://courseswyn.com/:splat"
+  status = 301
+
 [[redirects]]
   from = "https://www.courseswyn.com/*"
   to = "https://courseswyn.com/:splat"
   status = 301
+"@
 
-# Force HTTPS
-[[redirects]]
-  from = "http://courseswyn.com/*"
-  to = "https://courseswyn.com/:splat"
-  status = 301
+[System.IO.File]::WriteAllText("$pwd\netlify.toml", $netlifyConfig, [System.Text.UTF8Encoding]::new($false))

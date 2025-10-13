@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://courseswyn.com/sitemap.xml
 
 # Block specific paths
 Disallow: /search/
@@ -15,4 +15,4 @@ Allow: /js/
 Allow: /images/
 
 # Sitemap location
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://courseswyn.com/sitemap.xml
