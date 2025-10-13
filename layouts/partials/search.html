@@ -1,0 +1,172 @@
+<div class="search-container" id="search">
+    <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search courses..." aria-label="Search courses">
+        <button id="search-button" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+</div>
+
+<style>
+.search-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.search-box {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-right: none;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#search-input:focus {
+    border-color: #2563eb;
+}
+
+#search-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0 1.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+#search-button:hover {
+    background: #1d4ed8;
+}
+
+.search-results {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.search-result-item {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.search-result-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.search-result-title {
+    margin: 0 0 0.5rem;
+    color: #1a202c;
+    font-size: 1.25rem;
+}
+
+.search-result-snippet {
+    margin: 0;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.search-result-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+.no-results {
+    text-align: center;
+    padding: 2rem;
+    color: #718096;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    .search-result-item {
+        background: #2d3748;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .search-result-title {
+        color: #f7fafc;
+    }
+    
+    .search-result-snippet {
+        color: #cbd5e0;
+    }
+    
+    #search-input {
+        background: #2d3748;
+        border-color: #4a5568;
+        color: #f7fafc;
+    }
+    
+    #search-input::placeholder {
+        color: #a0aec0;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const searchResults = document.getElementById('search-results');
+    
+    // Simple search function
+    function performSearch(query) {
+        if (!query.trim()) {
+            searchResults.innerHTML = '<div class="no-results">Enter a search term to find courses</div>';
+            return;
+        }
+        
+        // In a real implementation, this would be a fetch to a search API
+        // For now, we'll show a message
+        searchResults.innerHTML = `
+            <div class="search-result-item">
+                <h3 class="search-result-title">Search functionality coming soon</h3>
+                <p class="search-result-snippet">
+                    We're working on implementing full search functionality. For now, you can browse our 
+                    <a href="/moocs/" style="color: #2563eb; text-decoration: underline;">MOOC courses</a> 
+                    or check back later for the search feature.
+                </p>
+                <div class="search-result-meta">
+                    <span>Status: Coming Soon</span>
+                </div>
+            </div>
+        `;
+    }
+    
+    // Event listeners
+    searchButton.addEventListener('click', () => performSearch(searchInput.value));
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            performSearch(searchInput.value);
+        }
+    });
+    
+    // Initial state
+    performSearch('');
+});
+</script>

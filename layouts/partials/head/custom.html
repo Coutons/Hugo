@@ -1,0 +1,65 @@
+<style>
+/* Custom Header Styles */
+.header {
+    padding: 1rem 2rem;
+    background: var(--header-bg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu-item {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu-item:hover {
+    color: var(--primary-color);
+}
+
+/* Dark mode support */
+[data-theme='dark'] .header {
+    background: #1f2937;
+}
+
+[data-theme='dark'] .menu-item {
+    color: #f3f4f6;
+}
+
+[data-theme='dark'] .menu-item:hover {
+    color: #60a5fa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+</style>

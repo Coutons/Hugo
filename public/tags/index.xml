@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on CoursesWyn</title>
+    <link>http://localhost:52592/tags/</link>
+    <description>Recent content in Tags on CoursesWyn</description>
+    <generator>Hugo -- 0.150.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Oct 2025 11:00:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:52592/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2025</title>
+      <link>http://localhost:52592/tags/2025/</link>
+      <pubDate>Mon, 13 Oct 2025 11:00:00 +0700</pubDate>
+      <guid>http://localhost:52592/tags/2025/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backend Development</title>
+      <link>http://localhost:52592/tags/backend-development/</link>
+      <pubDate>Mon, 13 Oct 2025 11:00:00 +0700</pubDate>
+      <guid>http://localhost:52592/tags/backend-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>http://localhost:52592/tags/java/</link>
+      <pubDate>Mon, 13 Oct 2025 11:00:00 +0700</pubDate>
+      <guid>http://localhost:52592/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spring Boot</title>
+      <link>http://localhost:52592/tags/spring-boot/</link>
+      <pubDate>Mon, 13 Oct 2025 11:00:00 +0700</pubDate>
+      <guid>http://localhost:52592/tags/spring-boot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spring Framework</title>
+      <link>http://localhost:52592/tags/spring-framework/</link>
+      <pubDate>Mon, 13 Oct 2025 11:00:00 +0700</pubDate>
+      <guid>http://localhost:52592/tags/spring-framework/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Udemy</title>
+      <link>http://localhost:52592/tags/udemy/</link>
+      <pubDate>Mon, 13 Oct 2025 11:00:00 +0700</pubDate>
+      <guid>http://localhost:52592/tags/udemy/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

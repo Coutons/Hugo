@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on CoursesWyn</title>
+    <link>http://localhost:52592/categories/</link>
+    <description>Recent content in Categories on CoursesWyn</description>
+    <generator>Hugo -- 0.150.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Oct 2025 11:00:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:52592/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java</title>
+      <link>http://localhost:52592/categories/java/</link>
+      <pubDate>Mon, 13 Oct 2025 11:00:00 +0700</pubDate>
+      <guid>http://localhost:52592/categories/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Online Learning</title>
+      <link>http://localhost:52592/categories/online-learning/</link>
+      <pubDate>Mon, 13 Oct 2025 11:00:00 +0700</pubDate>
+      <guid>http://localhost:52592/categories/online-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>http://localhost:52592/categories/programming/</link>
+      <pubDate>Mon, 13 Oct 2025 11:00:00 +0700</pubDate>
+      <guid>http://localhost:52592/categories/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spring</title>
+      <link>http://localhost:52592/categories/spring/</link>
+      <pubDate>Mon, 13 Oct 2025 11:00:00 +0700</pubDate>
+      <guid>http://localhost:52592/categories/spring/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

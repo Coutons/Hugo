@@ -1,0 +1,53 @@
+{{- $p := . -}}
+{{- $pages := .Site.RegularPages -}}
+{{- $sitemap := slice -}}
+
+{{- range $pages -}}
+  {{- if ne .Kind "page" -}}
+    {{- continue -}}
+  {{- end -}}
+  {{- if .Params.noindex -}}
+    {{- continue -}}
+  {{- end -}}
+  {{- $sitemap = $sitemap | append (dict
+    "loc" .Permalink
+    "lastmod" (.Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML)
+    "changefreq" (cond (eq .Params.sitemap.changefreq "") "monthly" .Params.sitemap.changefreq)
+    "priority" (cond (isset .Params.sitemap "priority") .Params.sitemap.priority "0.8")
+  ) -}}
+{{- end -}}
+
+{{- $sitemap = $sitemap | append (dict
+  "loc" "/"
+  "lastmod" now.Format "2006-01-02T15:04:05-07:00"
+  "changefreq" "daily"
+  "priority" "1.0"
+) -}}
+
+{{- $sitemap = $sitemap | append (dict
+  "loc" "/posts/"
+  "lastmod" now.Format "2006-01-02T15:04:05-07:00"
+  "changefreq" "daily"
+  "priority" "0.9"
+) -}}
+
+{{- $sitemap = $sitemap | append (dict
+  "loc" "/about/"
+  "lastmod" now.Format "2006-01-02T15:04:05-07:00"
+  "changefreq" "monthly"
+  "priority" "0.7"
+) -}}
+
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {{- range $sitemap -}}
+  <url>
+    <loc>{{ .loc }}</loc>
+    <lastmod>{{ .lastmod }}</lastmod>
+    <changefreq>{{ .changefreq }}</changefreq>
+    <priority>{{ .priority }}</priority>
+  </url>
+  {{- end -}}
+</urlset>

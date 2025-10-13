@@ -1,0 +1,76 @@
+baseURL = 'https://yourdomain.com'  # Ganti dengan domain Anda
+languageCode = 'en-us'
+defaultContentLanguage = 'en'
+title = 'CoursesWyn - Best Online Courses & Learning Platform'
+theme = 'PaperMod'
+
+# Pengaturan SEO
+enableRobotsTXT = true
+defaultContentLanguageInSubdir = true
+hasCJKLanguage = true
+
+[services]
+  [services.googleAnalytics]
+    ID = 'G-XXXXXXXXXX'  # Ganti dengan ID Google Analytics Anda
+
+[privacy]
+  [privacy.googleAnalytics]
+    disable = false
+    respectDoNotTrack = true
+    anonymizeIP = true
+
+[params]
+  env = 'production'
+  description = 'Discover the best online courses and tutorials. Learn programming, design, marketing, and more from industry experts.'
+  defaultKeywords = ['online courses', 'learn programming', 'web development', 'udemy courses', 'spring framework', 'java programming']
+  customCSS = ["/css/custom.css"]
+  
+  # Social Media
+  [params.social]
+    twitter = 'yourtwitter'
+    github = 'yourgithub'
+    linkedin = 'yourlinkedin'
+  
+  # Open Graph
+  [params.opengraph]
+    enable = true
+    twitter = '@yourtwitter'
+    
+  # Theme Settings
+  [params.theme]
+    hideMainMenu = false
+    hideSidebar = false
+    hideFooter = false
+    
+  # SEO Settings
+  [params.seo]
+    googleSiteVerification = "your-google-site-verification-code"
+    bingSiteVerification = "your-bing-site-verification-code"
+    
+  # Assets
+  [params.assets]
+    [params.assets.disableFingerprinting]
+      all = false
+    [params.assets.disableMinify]
+      all = false
+    [params.assets.disableAssets]
+      all = false
+    [params.assets.cdn]
+      # Use Font Awesome 6.4.0
+      font_awesome = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      
+  [params.icon]
+    font_awesome = "6.4.0"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = 'github'
+
+[imaging]
+  quality = 85
+  anchor = 'smart'
+  resampleFilter = 'CatmullRom'

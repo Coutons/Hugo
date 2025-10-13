@@ -1,0 +1,42 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-us'
+title = 'CoursesWyn'
+theme = 'PaperMod'
+
+[params]
+  env = 'development'
+  description = 'Unlock your potential with high-quality online courses'
+  customCSS = ["/css/custom.css"]
+  
+  [params.theme]
+    hideMainMenu = true
+    hideSidebar = true
+    hideFooter = true
+
+  # Enable Font Awesome
+  [params.assets]
+    [params.assets.disableFingerprinting]
+      all = false
+    [params.assets.disableMinify]
+      all = false
+    [params.assets.disableAssets]
+      all = false
+    [params.assets.cdn]
+      # Use Font Awesome 6.4.0
+      font_awesome = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      
+  [params.icon]
+    font_awesome = "6.4.0"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = 'github'
+
+[imaging]
+  quality = 85
+  anchor = 'smart'
+  resampleFilter = 'CatmullRom'
