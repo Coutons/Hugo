@@ -1,6 +1,6 @@
 baseURL = 'https://courseswyn.com/'
 languageCode = 'en-us'
-title = 'Your Site Title'
+title = 'CoursesWyn'
 theme = 'PaperMod'
 canonifyURLs = true
 

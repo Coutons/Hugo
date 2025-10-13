@@ -1,0 +1,22 @@
+[goldmark.renderer]
+  unsafe = true
+
+[goldmark.parser.attribute]
+  block = true
+  title = true
+
+[images]
+  # Disable image processing for external images
+  process = false
+  # Set a default base URL for relative image paths (optional)
+  # baseURL = "/images/"
+
+[goldmark.extensions]
+  typographer = true
+  table = true
+  definitionList = true
+  footnote = true
+  linkify = true
+  strikethrough = true
+  taskList = true
+  html = true

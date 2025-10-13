@@ -1,0 +1,16 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $title := .Get "title" | default "" }}
+
+<figure class="image-container">
+  <img 
+    src="{{ $src }}" 
+    alt="{{ $alt }}" 
+    loading="lazy"
+    class="img-fluid"
+    {{ with $title }}title="{{ . }}"{{ end }}
+  >
+  {{ with $title }}
+    <figcaption class="text-center mt-2 text-muted">{{ . }}</figcaption>
+  {{ end }}
+</figure>

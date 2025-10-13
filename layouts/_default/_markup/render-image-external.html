@@ -1,0 +1,16 @@
+{{- if hasPrefix .Destination "http" -}}
+  <figure class="image-container">
+    <img 
+      src="{{ .Destination }}" 
+      alt="{{ .Text }}" 
+      loading="lazy"
+      {{ with .Title }}title="{{ . }}"{{ end }}
+    >
+    {{ with .Title }}
+      <figcaption>{{ . }}</figcaption>
+    {{ end }}
+  </figure>
+{{- else -}}
+  {{/* Let the default render-image.html handle local images */}}
+  {{- partial "_default/_markup/render-image.html" . -}}
+{{- end -}}
