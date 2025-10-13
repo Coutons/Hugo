@@ -1,4 +1,3 @@
-$netlifyConfig = @"
 [build]
   command = "hugo --gc --minify --environment production"
   publish = "public"
