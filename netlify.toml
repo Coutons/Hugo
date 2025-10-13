@@ -1,18 +1,28 @@
 [build]
-  command = "hugo --gc --minify"
+  command = "hugo --gc --minify --environment production"
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.150.0"  # Match your local Hugo version
-  NODE_VERSION = "20"       # Or your preferred Node.js version
+  HUGO_VERSION = "0.150.0"
+  NODE_VERSION = "20"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+  HUGO_BASEURL = "https://courseswyn.com/"
 
 [[redirects]]
   from = "/*"
   to = "/:splat"
   status = 200
 
-# Redirect www to non-www (or vice versa)
+# Redirect www to non-www
 [[redirects]]
   from = "https://www.courseswyn.com/*"
+  to = "https://courseswyn.com/:splat"
+  status = 301
+
+# Force HTTPS
+[[redirects]]
+  from = "http://courseswyn.com/*"
   to = "https://courseswyn.com/:splat"
   status = 301
