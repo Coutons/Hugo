@@ -21,11 +21,3 @@
   from = "http://*"
   to = "https://courseswyn.com/:splat"
   status = 301
-
-[[redirects]]
-  from = "https://www.courseswyn.com/*"
-  to = "https://courseswyn.com/:splat"
-  status = 301
-"@
-
-[System.IO.File]::WriteAllText("$pwd\netlify.toml", $netlifyConfig, [System.Text.UTF8Encoding]::new($false))
