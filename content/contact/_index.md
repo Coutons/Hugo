@@ -1,27 +1,30 @@
 ---
-title: "Hubungi Saya"
-date: 2025-10-13T10:03:00+07:00
+title: "Contact Us"
+date: 2025-10-13
 draft: false
-description: "Hubungi saya untuk kolaborasi atau pertanyaan"
+type: contact
 ---
 
-# Hubungi Saya
+## Get in Touch
 
-Silakan isi formulir di bawah ini untuk menghubungi saya. Saya akan membalas pesan Anda secepat mungkin.
+Have questions or feedback? We'd love to hear from you! Fill out the form below or reach out to us through our social media channels.
 
-## Informasi Kontak
+### Contact Information
 
-- **Email**: email@example.com
-- **Telepon**: +62 812-3456-7890
-- **Alamat**: [Alamat Anda]
+- **Email**: your.email@example.com
+- **Phone**: +1 (123) 456-7890
+- **Address**: 123 Learning Street, Education City, 12345
 
-## Jam Kerja
+### Send Us a Message
 
-- Senin - Jumat: 09:00 - 17:00 WIB
-- Sabtu - Minggu: Libur
+[Contact form will be added here]
 
-## Media Sosial
+### Office Hours
 
-- [Twitter](https://twitter.com/username)
-- [GitHub](https://github.com/username)
-- [LinkedIn](https://linkedin.com/in/username)
+- Monday - Friday: 9:00 AM - 6:00 PM
+- Saturday: 10:00 AM - 4:00 PM
+- Sunday: Closed
+
+### Connect With Us
+
+[Social media links will be added here]

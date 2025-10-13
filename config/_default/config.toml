@@ -3,26 +3,25 @@ languageCode = 'en-us'
 title = 'CoursesWyn'
 theme = 'PaperMod'
 
+# Disable language in URL
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false
+
+[permalinks]
+  posts = '/:slug/'
+  page = '/:slug/'
+
 [params]
   env = 'development'
-  description = 'Unlock your potential with high-quality online courses'
-  customCSS = ["/css/custom.css"]
+  description = 'Your site description'
   
   [params.theme]
-    hideMainMenu = true
-    hideSidebar = true
-    hideFooter = true
+    hideMainMenu = false
+    hideSidebar = false
+    hideFooter = false
 
-  # Enable Font Awesome
   [params.assets]
-    [params.assets.disableFingerprinting]
-      all = false
-    [params.assets.disableMinify]
-      all = false
-    [params.assets.disableAssets]
-      all = false
     [params.assets.cdn]
-      # Use Font Awesome 6.4.0
       font_awesome = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       
   [params.icon]

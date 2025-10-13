@@ -1,3 +1,18 @@
 User-agent: *
-Disallow:
-Sitemap: http://localhost:1313/sitemap.xml
+Allow: /
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Block specific paths
+Disallow: /search/
+Disallow: /tag/
+Disallow: /categories/
+
+# Crawl-delay: 10  # Uncomment and adjust if needed
+
+# Allow all robots to access these directories
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
