@@ -1,4 +1,6 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://Coutons.github.io/Hugo/"
+# Pengaturan build untuk GitHub Pages
+publishDir = "docs"
 languageCode = "en-us"
 title = "CoursesWyn"
 theme = "PaperMod"
