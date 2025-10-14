@@ -1,5 +1,13 @@
 {{ $page := . }}
-{{ if eq $page.RelPermalink "/posts/best-data-science-courses-udemy/" }}
+{{ if $page.IsPage }}
+{{ $featured_image := "" }}
+{{ if $page.Params.image }}
+  {{ $featured_image = $page.Params.image | absURL }}
+{{ else if $page.Params.cover }}
+  {{ $featured_image = $page.Params.cover | absURL }}
+{{ else if $page.Site.Params.defaultFeaturedImage }}
+  {{ $featured_image = $page.Site.Params.defaultFeaturedImage | absURL }}
+{{ end }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -9,7 +17,7 @@
   "description": "{{ $page.Description | default $page.Summary }}",
   "keywords": {{ $page.Params.tags | jsonify }},
   "inLanguage": "en",
-  "image": "{{ $page.Params.image | default "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg" }}",
+  "image": "{{ $featured_image | default "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg" }}",
   "datePublished": "{{ $page.Date.Format "2006-01-02T15:04:05-07:00" }}",
   "dateModified": "{{ $page.Lastmod.Format "2006-01-02T15:04:05-07:00" }}",
   "author": {
