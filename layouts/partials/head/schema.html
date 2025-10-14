@@ -1,13 +1,21 @@
-{{ $page := . }}
-{{ if $page.IsPage }}
-{{ $featured_image := "" }}
-{{ if $page.Params.image }}
-  {{ $featured_image = $page.Params.image | absURL }}
-{{ else if $page.Params.cover }}
-  {{ $featured_image = $page.Params.cover | absURL }}
-{{ else if $page.Site.Params.defaultFeaturedImage }}
-  {{ $featured_image = $page.Site.Params.defaultFeaturedImage | absURL }}
-{{ end }}
+{{- $page := . -}}
+{{- if $page.IsPage -}}
+{{- $featured_image := "" -}}
+{{- with $page.Params.image -}}
+  {{- $featured_image = . | absURL -}}
+{{- else with $page.Params.cover -}}
+  {{- $featured_image = . | absURL -}}
+{{- else with $page.Site.Params.defaultFeaturedImage -}}
+  {{- $featured_image = . | absURL -}}
+{{- end -}}
+{{- $site := $page.Site -}}
+{{- $baseURL := $site.BaseURL | strings.TrimSuffix "/" -}}
+{{- $logoURL := "" -}}
+{{- with $site.Params.logo -}}
+  {{- $logoURL = . | absURL -}}
+{{- else -}}
+  {{- $logoURL = printf "%s/logo.png" $baseURL -}}
+{{- end -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -17,7 +25,7 @@
   "description": "{{ $page.Description | default $page.Summary }}",
   "keywords": {{ $page.Params.tags | jsonify }},
   "inLanguage": "en",
-  "image": "{{ $featured_image | default "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg" }}",
+  "image": "{{ $featured_image | default (print $baseURL "/images/default-featured.jpg") }}",
   "datePublished": "{{ $page.Date.Format "2006-01-02T15:04:05-07:00" }}",
   "dateModified": "{{ $page.Lastmod.Format "2006-01-02T15:04:05-07:00" }}",
   "author": {
@@ -54,15 +62,15 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "{{ $page.Site.Title | default "CoursesWyn" }}",
+    "name": "{{ $site.Title | default "CoursesWyn" }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ $page.Site.Params.logo | default "https://courseswync.com/logo.png" }}"
+      "url": "{{ $logoURL }}"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "{{ $page.Permalink }}"
+    "@id": "{{ $page.Permalink | default $page.RelPermalink | absURL }}"
   }
 }
 </script>
