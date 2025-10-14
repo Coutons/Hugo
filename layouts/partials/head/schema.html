@@ -1,37 +1,60 @@
-{{ if eq .RelPermalink "/posts/best-data-science-courses-udemy/" }}
+{{ $page := . }}
+{{ if eq $page.RelPermalink "/posts/best-data-science-courses-udemy/" }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "10 Best Data Science Courses on Udemy 2025",
-  "name": "10 Best Data Science Courses on Udemy 2025",
-  "description": "Discover the top 10 best data science courses on Udemy for 2025. Learn machine learning, AI, Python, and data analysis from top instructors.",
-  "keywords": ["data science", "udemy", "machine learning", "python", "2025"],
+  "headline": "{{ $page.Title }}",
+  "name": "{{ $page.Title }}",
+  "description": "{{ $page.Description | default $page.Summary }}",
+  "keywords": {{ $page.Params.tags | jsonify }},
   "inLanguage": "en",
-  "image": "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg",
-  "datePublished": "2025-10-13T00:00:00+07:00",
-  "dateModified": "2025-10-13T15:00:00+07:00",
+  "image": "{{ $page.Params.image | default "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg" }}",
+  "datePublished": "{{ $page.Date.Format "2006-01-02T15:04:05-07:00" }}",
+  "dateModified": "{{ $page.Lastmod.Format "2006-01-02T15:04:05-07:00" }}",
   "author": {
     "@type": "Person",
-    "name": "Josh Smith",
-    "url": "https://courseswyn.com/about/",
-    "image": "https://courseswyn.com/img/profile.jpg",
+    "name": "{{ $page.Params.author | default "Josh Smith" }}",
+    "url": "{{ $page.Site.Params.authorUrl | default "https://courseswyn.com/about/" }}",
+    "image": "{{ $page.Site.Params.authorImage | default "https://courseswyn.com/img/profile.jpg" }}",
     "sameAs": [
       "https://twitter.com/CoursesGift",
       "https://github.com/Coutons"
+    ],
+    "knowsAbout": [
+      "https://en.wikipedia.org/wiki/Machine_learning",
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://en.wikipedia.org/wiki/Deep_learning",
+      "https://en.wikipedia.org/wiki/Computer_vision",
+      "https://en.wikipedia.org/wiki/Recommender_system",
+      "https://en.wikipedia.org/wiki/Time_series",
+      "https://en.wikipedia.org/wiki/Forecasting",
+      "https://en.wikipedia.org/wiki/Python_(programming_language)",
+      "https://en.wikipedia.org/wiki/JavaScript",
+      "https://en.wikipedia.org/wiki/HTML",
+      "https://en.wikipedia.org/wiki/CSS",
+      "https://en.wikipedia.org/wiki/SQL",
+      "https://en.wikipedia.org/wiki/NoSQL",
+      "https://en.wikipedia.org/wiki/Kaggle",
+      "https://en.wikipedia.org/wiki/Google_Colaboratory",
+      "https://en.wikipedia.org/wiki/Google_Cloud_Platform",
+      "https://en.wikipedia.org/wiki/Amazon_Web_Services",
+      "https://en.wikipedia.org/wiki/Natural_language_processing",
+      "https://en.wikipedia.org/wiki/Computer_science",
+      "https://en.wikipedia.org/wiki/Software_engineering"
     ]
   },
   "publisher": {
     "@type": "Organization",
-    "name": "CoursesWyn",
+    "name": "{{ $page.Site.Title | default "CoursesWyn" }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://courseswync.com/logo.png"
+      "url": "{{ $page.Site.Params.logo | default "https://courseswync.com/logo.png" }}"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://courseswyn.com/posts/best-data-science-courses-udemy/"
+    "@id": "{{ $page.Permalink }}"
   }
 }
 </script>
