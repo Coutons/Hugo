@@ -1,4 +1,4 @@
-baseURL = "https://Coutons.github.io/Hugo/"
+baseURL = "https://www.courseswyn.com/"
 # Pengaturan build untuk GitHub Pages
 publishDir = "docs"
 languageCode = "en-us"
@@ -38,6 +38,13 @@ theme = "PaperMod"
   tag = "tags"
 
 [permalinks]
-  posts = '/:slug/'
-  page = '/:slug/'
+  posts = "/:year/:month/:slug/"
+  page = "/:slug/"
 
+# Pastikan URL selalu menggunakan HTTPS
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[services]
+  [services.googleAnalytics]
+    disable = true
