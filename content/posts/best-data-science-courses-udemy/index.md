@@ -14,24 +14,24 @@ seo_description: "Discover the top 10 best data science courses on Udemy for 202
 [structuredData]
   "@context": "https://schema.org"
   "@type": "BlogPosting"
-  "headline"= "10 Best Data Science Courses on Udemy 2025"
-  "name"= "10 Best Data Science Courses on Udemy 2025"
-  "description"= "Discover the top 10 best data science courses on Udemy for 2025. Learn machine learning, AI, Python, and data analysis from top instructors."
-  "keywords"= ["data science", "udemy", "machine learning", "python", "2025"]
-  "inLanguage"= "en"
-  "image"= "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg"
-  "datePublished"= "2025-10-13T00:00:00+07:00"
-  "dateModified"= "2025-10-13T15:00:00+07:00"
-  "author"= {
-    "@type"= "Person"
-    "name"= "Josh Smith"
-    "url"= "https://courseswyn.com/about/"
-    "image"= "https://courseswyn.com/img/profile.jpg"
-    "sameAs"= [
+  "headline": "10 Best Data Science Courses on Udemy 2025"
+  "name": "10 Best Data Science Courses on Udemy 2025"
+  "description": "Discover the top 10 best data science courses on Udemy for 2025. Learn machine learning, AI, Python, and data analysis from top instructors."
+  "keywords": ["data science", "udemy", "machine learning", "python", "2025"]
+  "inLanguage": "en"
+  "image": "https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg"
+  "datePublished": "2025-10-13T00:00:00+07:00"
+  "dateModified": "2025-10-13T15:00:00+07:00"
+  "author": {
+    "@type": "Person"
+    "name": "Josh Smith"
+    "url": "https://courseswyn.com/about/"
+    "image": "https://courseswyn.com/img/profile.jpg"
+    "sameAs": [
       "https://twitter.com/CoursesGift",
       "https://github.com/Coutons"
     ]
-    "knowsAbout"= [
+    "knowsAbout": [
       "https://en.wikipedia.org/wiki/Machine_learning",
       "https://en.wikipedia.org/wiki/Artificial_intelligence",
       "https://en.wikipedia.org/wiki/Deep_learning",
